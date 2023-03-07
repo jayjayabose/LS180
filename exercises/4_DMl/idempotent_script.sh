@@ -1,0 +1,10 @@
+DATABASE_NAME=$1
+# TEST=$2
+
+echo $DATABASE_NAME
+# echo $TEST
+
+dropdb $DATABASE_NAME
+createdb $DATABASE_NAME
+
+psql $DATABASE_NAME -f $DATABASE_NAME.sql
